@@ -1,0 +1,95 @@
+
+<head>
+  <!--
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="css/application.css">
+     <link rel="stylesheet" type="text/css" href="css/demoStyles.css">
+
+
+
+
+  <title></title>
+</head>
+<body onload="init()">
+  <header id="header" class="SoundJS">
+      <h1 class="text-product">VeVi</h1>
+      <div class="line-separator"></div>
+      <p class="subtitle">Veni Vidi Vox - Experience Music in a whole new way</p>
+      <div class="restart">Click Twice to Restart</div>
+  </header>
+
+  <div id="error">
+    <h1>Sorry!</h1>
+    <p>SoundJS or Web Audio is not currently supported in your browser.
+        Either you are using a browser that does not support web audio, or you are trying to open this locally.
+    Because web audio uses XHR, it cannot be opened as a local file and must be hosted on a server.</p>
+    <p>Please <a href="http://github.com/CreateJS/SoundJS/issues" target="_blank">log a bug</a>
+      if you are not opening this locally and your browser supports web audio.  Thank you.</p>
+  </div>
+
+    <div class="canvasHolder">
+        <canvas id="testCanvas" width="960" height="400"></canvas>
+    </div>
+
+    <script type="text/javascript" src="SoundJS/examples/assets/easeljs-NEXT.min.js"></script>
+
+  <!-- Note: All SoundJS classes are listed here: -->
+  <script type="text/javascript" src="SoundJS/src/createjs/utils/Proxy.js"></script>
+  <script type="text/javascript" src="SoundJS/src/createjs/utils/IndexOf.js"></script>
+  <script type="text/javascript" src="SoundJS/src/createjs/utils/definePropertySupported.js"></script>
+  <script type="text/javascript" src="SoundJS/src/createjs/events/Event.js"></script>
+  <script type="text/javascript" src="SoundJS/src/createjs/events/EventDispatcher.js"></script>
+    <script type="text/javascript" src="SoundJS/src/soundjs/Sound.js"></script>
+    <script type="text/javascript" src="SoundJS/src/soundjs/WebAudioPlugin.js"></script>
+    <script type="text/javascript" src="SoundJS/src/soundjs/HTMLAudioPlugin.js"></script>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+    <!-- We also provide hosted minified versions of all CreateJS libraries.
+        http://code.createjs.com -->
+
+
+<!-- ## create an erb file that has a loop that loops over
+ -->
+
+ <ul id="song-list">
+
+</ul>
+
+
+
+ <ul>
+     <li><form id="song-form">
+         <input type="text" name="song" placeholder="put name of song" class="song">
+         <input type="submit" class="songs-form-button" value="search song">
+     </form></li>
+ </ul>
+ <ul id="song-button">
+    <li><button class="song-button" data-filename="Kaskade (feat. Mindy Gledhill)-Eyes.mp3">Kaskade</button></li>
+    <br>
+    <li><button class="song-button" data-filename="05-Binrpilot-Underground.mp3">Underground</button></li>
+    <br>
+    <li><button class="song-button" data-filename="Booker T. and The MG's - One Who Really Loves You.mp3">Booker T.</button></li>
+    <br>
+     <li><button class="song-button" data-filename="Rodrigo y Gabriela - Diablo Rojo.mp3">Rodrigo y Gabriela</button></li>
+    <br>
+    <li><div id="your-song"></div></li>
+</ul>
+
+
+
+
+
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script src="js/spotify-web-api.js"></script>
+   <script src="js/view.js"></script>
+  <script src="js/application.js"></script>
+
+</body>
